@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
 system("color F0");  //更改输出界面颜色
-VideoCapture video("../Resources/test.mp4");
+VideoCapture video("../../Resources/test.mp4");
 if (video.isOpened())
  { 
          cout << "视频中图像的宽度=" << video.get(CAP_PROP_FRAME_WIDTH) << endl;

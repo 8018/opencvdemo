@@ -58,7 +58,7 @@ Mat Sobel(Mat &src, int x_flag, int y_flag, int kSize, int borderType){
     return dst;
 }
 int main(){
-    Mat src = imread("../resources/cathy.png");
+    Mat src = imread("../../resources/cathy.png");
     Mat gray;
     cvtColor(src, gray, COLOR_BGR2GRAY);
     Mat dst1 = Sobel(gray, 1, 0, 3, BORDER_DEFAULT);

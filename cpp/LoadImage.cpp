@@ -5,7 +5,7 @@ using namespace cv;
 int main(int, char**)
 {
      Mat image;
-    image = imread( "../Resources/cathy.png", 1 );
+    image = imread( "../../Resources/cathy.png", 1 );
 
     //宽度
     std::cout << "宽度： "<< image.cols << std::endl;

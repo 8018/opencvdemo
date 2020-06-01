@@ -1,15 +1,16 @@
 cmake_minimum_required(VERSION 3.0)  
     project(opencvdemo)  
-    find_package( OpenCV REQUIRED )  
-    ADD_EXECUTABLE(LoadImage LoadImage.cpp)
-    ADD_EXECUTABLE(LoadVideo LoadVideo.cpp)
-    ADD_EXECUTABLE(transform transform.cpp)
-    ADD_EXECUTABLE(calGrayHist calGrayHist.cpp)
-    ADD_EXECUTABLE(GaussBlur GaussBlur.cpp)
+    find_package( OpenCV REQUIRED )
 
-    target_link_libraries(LoadImage ${OpenCV_LIBS} )
-    target_link_libraries(LoadVideo ${OpenCV_LIBS} )
-    target_link_libraries(transform ${OpenCV_LIBS} )
-    target_link_libraries(calGrayHist ${OpenCV_LIBS} )
-    target_link_libraries(GaussBlur ${OpenCV_LIBS} )
+    #ADD_EXECUTABLE(LoadImage LoadImage.cpp)
+    #target_link_libraries(LoadImage ${OpenCV_LIBS} )
+
+    file( GLOB APP_SOURCES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}  *.cpp )
+    foreach( sourcefile ${APP_SOURCES} )
+        string( REPLACE ".cpp" "" executable ${sourcefile} )
+
+        add_executable( ${executable} ${sourcefile} )
+        # Make sure YourLib is linked to each app
+        target_link_libraries( ${executable} ${OpenCV_LIBS}  )
+    endforeach( sourcefile ${APP_SOURCES} )
 

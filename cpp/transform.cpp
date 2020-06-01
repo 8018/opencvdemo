@@ -7,7 +7,7 @@ using namespace std;
 int main(int, char**)
 {
      Mat src;
-    src = imread( "../Resources/cathy.png", 1 );
+    src = imread( "../../Resources/cathy.png", 1 );
 
     //宽度
     cout << "宽度： "<< src.cols << endl;

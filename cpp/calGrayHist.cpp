@@ -50,7 +50,7 @@ Mat calHistrom(Mat image){
 int main(int argc,char *argv[]){
 
     Mat src;
-    src = imread( "../Resources/cathy.png", 1 );
+    src = imread( "../../Resources/cathy.png", 1 );
 	if (!src.data)
 	{
 		printf("could not load image...\n");
@@ -82,6 +82,8 @@ int main(int argc,char *argv[]){
 	namedWindow("ouput hist", WINDOW_AUTOSIZE);
 	imshow("output", dst);
 	imshow("output hist", dstHist);
+
+    oHist = calHistrom(dst);
 
     namedWindow("gmma output", WINDOW_AUTOSIZE);
 	imshow("gmma output", o);
