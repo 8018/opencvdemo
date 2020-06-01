@@ -1,0 +1,5 @@
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/transform.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/LoadVideo.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/rebuild_cache.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/edit_cache.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/LoadImage.dir

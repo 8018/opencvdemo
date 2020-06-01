@@ -131,6 +131,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named transform
+
+# Build rule for target.
+transform: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 transform
+.PHONY : transform
+
+# fast build rule for target.
+transform/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/build
+.PHONY : transform/fast
+
+#=============================================================================
 # Target rules for targets named LoadVideo
 
 # Build rule for target.
@@ -210,6 +223,33 @@ LoadVideo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoadVideo.dir/build.make CMakeFiles/LoadVideo.dir/LoadVideo.cpp.s
 .PHONY : LoadVideo.cpp.s
 
+transform.o: transform.cpp.o
+
+.PHONY : transform.o
+
+# target to build an object file
+transform.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/transform.cpp.o
+.PHONY : transform.cpp.o
+
+transform.i: transform.cpp.i
+
+.PHONY : transform.i
+
+# target to preprocess a source file
+transform.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/transform.cpp.i
+.PHONY : transform.cpp.i
+
+transform.s: transform.cpp.s
+
+.PHONY : transform.s
+
+# target to generate assembly for a file
+transform.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/transform.cpp.s
+.PHONY : transform.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -220,12 +260,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... LoadImage"
 	@echo "... LoadVideo"
+	@echo "... transform"
 	@echo "... LoadImage.o"
 	@echo "... LoadImage.i"
 	@echo "... LoadImage.s"
 	@echo "... LoadVideo.o"
 	@echo "... LoadVideo.i"
 	@echo "... LoadVideo.s"
+	@echo "... transform.o"
+	@echo "... transform.i"
+	@echo "... transform.s"
 .PHONY : help
 
 

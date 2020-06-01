@@ -1,0 +1,77 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "opencvdemo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "LoadImage::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LoadImage-Debug-4589cba60253989b1439.json",
+					"name" : "LoadImage",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LoadVideo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LoadVideo-Debug-04bfb9ecbfa839df4904.json",
+					"name" : "LoadVideo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "transform::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-transform-Debug-4e5e50cab5b371d9cee5.json",
+					"name" : "transform",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/michaelliu/code/opencvdemo/cpp/build",
+		"source" : "/Users/michaelliu/code/opencvdemo/cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

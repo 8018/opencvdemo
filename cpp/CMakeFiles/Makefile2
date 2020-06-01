@@ -73,6 +73,7 @@ CMAKE_BINARY_DIR = /Users/michaelliu/code/opencvdemo/cpp
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/transform.dir/all
 all: CMakeFiles/LoadVideo.dir/all
 all: CMakeFiles/LoadImage.dir/all
 
@@ -84,10 +85,38 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/transform.dir/clean
 clean: CMakeFiles/LoadVideo.dir/clean
 clean: CMakeFiles/LoadImage.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/transform.dir
+
+# All Build rule for target.
+CMakeFiles/transform.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=5,6 "Built target transform"
+.PHONY : CMakeFiles/transform.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/transform.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaelliu/code/opencvdemo/cpp/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/transform.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaelliu/code/opencvdemo/cpp/CMakeFiles 0
+.PHONY : CMakeFiles/transform.dir/rule
+
+# Convenience name for target.
+transform: CMakeFiles/transform.dir/rule
+
+.PHONY : transform
+
+# clean rule for target.
+CMakeFiles/transform.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/clean
+.PHONY : CMakeFiles/transform.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/LoadVideo.dir
