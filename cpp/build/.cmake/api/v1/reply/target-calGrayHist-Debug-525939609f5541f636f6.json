@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "LoadVideo"
+			"path" : "calGrayHist"
 		}
 	],
 	"backtrace" : 1,
@@ -25,13 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 5,
+				"line" : 7,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 10,
+				"line" : 13,
 				"parent" : 0
 			}
 		]
@@ -63,7 +63,7 @@
 			]
 		}
 	],
-	"id" : "LoadVideo::@6890427a1f51a3e7e1df",
+	"id" : "calGrayHist::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -158,8 +158,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "LoadVideo",
-	"nameOnDisk" : "LoadVideo",
+	"name" : "calGrayHist",
+	"nameOnDisk" : "calGrayHist",
 	"paths" : 
 	{
 		"build" : ".",
@@ -180,7 +180,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "LoadVideo.cpp",
+			"path" : "calGrayHist.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

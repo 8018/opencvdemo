@@ -4,9 +4,12 @@ cmake_minimum_required(VERSION 3.0)
     ADD_EXECUTABLE(LoadImage LoadImage.cpp)
     ADD_EXECUTABLE(LoadVideo LoadVideo.cpp)
     ADD_EXECUTABLE(transform transform.cpp)
-
+    ADD_EXECUTABLE(calGrayHist calGrayHist.cpp)
+    ADD_EXECUTABLE(GaussBlur GaussBlur.cpp)
 
     target_link_libraries(LoadImage ${OpenCV_LIBS} )
     target_link_libraries(LoadVideo ${OpenCV_LIBS} )
     target_link_libraries(transform ${OpenCV_LIBS} )
+    target_link_libraries(calGrayHist ${OpenCV_LIBS} )
+    target_link_libraries(GaussBlur ${OpenCV_LIBS} )
 

@@ -131,6 +131,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named GaussBlur
+
+# Build rule for target.
+GaussBlur: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GaussBlur
+.PHONY : GaussBlur
+
+# fast build rule for target.
+GaussBlur/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussBlur.dir/build.make CMakeFiles/GaussBlur.dir/build
+.PHONY : GaussBlur/fast
+
+#=============================================================================
+# Target rules for targets named calGrayHist
+
+# Build rule for target.
+calGrayHist: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 calGrayHist
+.PHONY : calGrayHist
+
+# fast build rule for target.
+calGrayHist/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calGrayHist.dir/build.make CMakeFiles/calGrayHist.dir/build
+.PHONY : calGrayHist/fast
+
+#=============================================================================
 # Target rules for targets named transform
 
 # Build rule for target.
@@ -168,6 +194,33 @@ LoadImage: cmake_check_build_system
 LoadImage/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoadImage.dir/build.make CMakeFiles/LoadImage.dir/build
 .PHONY : LoadImage/fast
+
+GaussBlur.o: GaussBlur.cpp.o
+
+.PHONY : GaussBlur.o
+
+# target to build an object file
+GaussBlur.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussBlur.dir/build.make CMakeFiles/GaussBlur.dir/GaussBlur.cpp.o
+.PHONY : GaussBlur.cpp.o
+
+GaussBlur.i: GaussBlur.cpp.i
+
+.PHONY : GaussBlur.i
+
+# target to preprocess a source file
+GaussBlur.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussBlur.dir/build.make CMakeFiles/GaussBlur.dir/GaussBlur.cpp.i
+.PHONY : GaussBlur.cpp.i
+
+GaussBlur.s: GaussBlur.cpp.s
+
+.PHONY : GaussBlur.s
+
+# target to generate assembly for a file
+GaussBlur.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussBlur.dir/build.make CMakeFiles/GaussBlur.dir/GaussBlur.cpp.s
+.PHONY : GaussBlur.cpp.s
 
 LoadImage.o: LoadImage.cpp.o
 
@@ -223,6 +276,33 @@ LoadVideo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoadVideo.dir/build.make CMakeFiles/LoadVideo.dir/LoadVideo.cpp.s
 .PHONY : LoadVideo.cpp.s
 
+calGrayHist.o: calGrayHist.cpp.o
+
+.PHONY : calGrayHist.o
+
+# target to build an object file
+calGrayHist.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calGrayHist.dir/build.make CMakeFiles/calGrayHist.dir/calGrayHist.cpp.o
+.PHONY : calGrayHist.cpp.o
+
+calGrayHist.i: calGrayHist.cpp.i
+
+.PHONY : calGrayHist.i
+
+# target to preprocess a source file
+calGrayHist.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calGrayHist.dir/build.make CMakeFiles/calGrayHist.dir/calGrayHist.cpp.i
+.PHONY : calGrayHist.cpp.i
+
+calGrayHist.s: calGrayHist.cpp.s
+
+.PHONY : calGrayHist.s
+
+# target to generate assembly for a file
+calGrayHist.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calGrayHist.dir/build.make CMakeFiles/calGrayHist.dir/calGrayHist.cpp.s
+.PHONY : calGrayHist.cpp.s
+
 transform.o: transform.cpp.o
 
 .PHONY : transform.o
@@ -258,15 +338,23 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... GaussBlur"
 	@echo "... LoadImage"
 	@echo "... LoadVideo"
+	@echo "... calGrayHist"
 	@echo "... transform"
+	@echo "... GaussBlur.o"
+	@echo "... GaussBlur.i"
+	@echo "... GaussBlur.s"
 	@echo "... LoadImage.o"
 	@echo "... LoadImage.i"
 	@echo "... LoadImage.s"
 	@echo "... LoadVideo.o"
 	@echo "... LoadVideo.i"
 	@echo "... LoadVideo.s"
+	@echo "... calGrayHist.o"
+	@echo "... calGrayHist.i"
+	@echo "... calGrayHist.s"
 	@echo "... transform.o"
 	@echo "... transform.i"
 	@echo "... transform.s"

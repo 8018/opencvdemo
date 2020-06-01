@@ -73,6 +73,8 @@ CMAKE_BINARY_DIR = /Users/michaelliu/code/opencvdemo/cpp
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/GaussBlur.dir/all
+all: CMakeFiles/calGrayHist.dir/all
 all: CMakeFiles/transform.dir/all
 all: CMakeFiles/LoadVideo.dir/all
 all: CMakeFiles/LoadImage.dir/all
@@ -85,11 +87,67 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/GaussBlur.dir/clean
+clean: CMakeFiles/calGrayHist.dir/clean
 clean: CMakeFiles/transform.dir/clean
 clean: CMakeFiles/LoadVideo.dir/clean
 clean: CMakeFiles/LoadImage.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/GaussBlur.dir
+
+# All Build rule for target.
+CMakeFiles/GaussBlur.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussBlur.dir/build.make CMakeFiles/GaussBlur.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussBlur.dir/build.make CMakeFiles/GaussBlur.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=1,2 "Built target GaussBlur"
+.PHONY : CMakeFiles/GaussBlur.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/GaussBlur.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaelliu/code/opencvdemo/cpp/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GaussBlur.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaelliu/code/opencvdemo/cpp/CMakeFiles 0
+.PHONY : CMakeFiles/GaussBlur.dir/rule
+
+# Convenience name for target.
+GaussBlur: CMakeFiles/GaussBlur.dir/rule
+
+.PHONY : GaussBlur
+
+# clean rule for target.
+CMakeFiles/GaussBlur.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GaussBlur.dir/build.make CMakeFiles/GaussBlur.dir/clean
+.PHONY : CMakeFiles/GaussBlur.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/calGrayHist.dir
+
+# All Build rule for target.
+CMakeFiles/calGrayHist.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calGrayHist.dir/build.make CMakeFiles/calGrayHist.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calGrayHist.dir/build.make CMakeFiles/calGrayHist.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=7,8 "Built target calGrayHist"
+.PHONY : CMakeFiles/calGrayHist.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/calGrayHist.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaelliu/code/opencvdemo/cpp/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/calGrayHist.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/michaelliu/code/opencvdemo/cpp/CMakeFiles 0
+.PHONY : CMakeFiles/calGrayHist.dir/rule
+
+# Convenience name for target.
+calGrayHist: CMakeFiles/calGrayHist.dir/rule
+
+.PHONY : calGrayHist
+
+# clean rule for target.
+CMakeFiles/calGrayHist.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calGrayHist.dir/build.make CMakeFiles/calGrayHist.dir/clean
+.PHONY : CMakeFiles/calGrayHist.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/transform.dir
@@ -98,7 +156,7 @@ clean: CMakeFiles/LoadImage.dir/clean
 CMakeFiles/transform.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/transform.dir/build.make CMakeFiles/transform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=5,6 "Built target transform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=9,10 "Built target transform"
 .PHONY : CMakeFiles/transform.dir/all
 
 # Build rule for subdir invocation for target.
@@ -125,7 +183,7 @@ CMakeFiles/transform.dir/clean:
 CMakeFiles/LoadVideo.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoadVideo.dir/build.make CMakeFiles/LoadVideo.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoadVideo.dir/build.make CMakeFiles/LoadVideo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=3,4 "Built target LoadVideo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=5,6 "Built target LoadVideo"
 .PHONY : CMakeFiles/LoadVideo.dir/all
 
 # Build rule for subdir invocation for target.
@@ -152,7 +210,7 @@ CMakeFiles/LoadVideo.dir/clean:
 CMakeFiles/LoadImage.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoadImage.dir/build.make CMakeFiles/LoadImage.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LoadImage.dir/build.make CMakeFiles/LoadImage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=1,2 "Built target LoadImage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/michaelliu/code/opencvdemo/cpp/CMakeFiles --progress-num=3,4 "Built target LoadImage"
 .PHONY : CMakeFiles/LoadImage.dir/all
 
 # Build rule for subdir invocation for target.

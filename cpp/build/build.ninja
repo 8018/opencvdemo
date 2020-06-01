@@ -34,6 +34,95 @@ CONFIGURATION = Debug
 
 include rules.ninja
 
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/michaelliu/code/opencvdemo/cpp/build && /usr/local/Cellar/cmake/3.17.3/bin/cmake --regenerate-during-build -S/Users/michaelliu/code/opencvdemo/cpp -B/Users/michaelliu/code/opencvdemo/cpp/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/michaelliu/code/opencvdemo/cpp/build && /usr/local/Cellar/cmake/3.17.3/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+# =============================================================================
+# Object build statements for EXECUTABLE target GaussBlur
+
+
+#############################################
+# Order-only phony target for GaussBlur
+
+build cmake_object_order_depends_target_GaussBlur: phony || CMakeFiles/GaussBlur.dir
+
+build CMakeFiles/GaussBlur.dir/GaussBlur.cpp.o: CXX_COMPILER__GaussBlur_Debug ../GaussBlur.cpp || cmake_object_order_depends_target_GaussBlur
+  DEP_FILE = CMakeFiles/GaussBlur.dir/GaussBlur.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11
+  INCLUDES = -isystem /usr/local/include/opencv4
+  OBJECT_DIR = CMakeFiles/GaussBlur.dir
+  OBJECT_FILE_DIR = CMakeFiles/GaussBlur.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GaussBlur
+
+
+#############################################
+# Link the executable GaussBlur
+
+build GaussBlur: CXX_EXECUTABLE_LINKER__GaussBlur_Debug CMakeFiles/GaussBlur.dir/GaussBlur.cpp.o | /usr/local/lib/libopencv_dnn.4.3.0.dylib /usr/local/lib/libopencv_gapi.4.3.0.dylib /usr/local/lib/libopencv_highgui.4.3.0.dylib /usr/local/lib/libopencv_ml.4.3.0.dylib /usr/local/lib/libopencv_objdetect.4.3.0.dylib /usr/local/lib/libopencv_photo.4.3.0.dylib /usr/local/lib/libopencv_stitching.4.3.0.dylib /usr/local/lib/libopencv_video.4.3.0.dylib /usr/local/lib/libopencv_videoio.4.3.0.dylib /usr/local/lib/libopencv_imgcodecs.4.3.0.dylib /usr/local/lib/libopencv_calib3d.4.3.0.dylib /usr/local/lib/libopencv_features2d.4.3.0.dylib /usr/local/lib/libopencv_flann.4.3.0.dylib /usr/local/lib/libopencv_imgproc.4.3.0.dylib /usr/local/lib/libopencv_core.4.3.0.dylib
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libopencv_dnn.4.3.0.dylib  /usr/local/lib/libopencv_gapi.4.3.0.dylib  /usr/local/lib/libopencv_highgui.4.3.0.dylib  /usr/local/lib/libopencv_ml.4.3.0.dylib  /usr/local/lib/libopencv_objdetect.4.3.0.dylib  /usr/local/lib/libopencv_photo.4.3.0.dylib  /usr/local/lib/libopencv_stitching.4.3.0.dylib  /usr/local/lib/libopencv_video.4.3.0.dylib  /usr/local/lib/libopencv_videoio.4.3.0.dylib  /usr/local/lib/libopencv_imgcodecs.4.3.0.dylib  /usr/local/lib/libopencv_calib3d.4.3.0.dylib  /usr/local/lib/libopencv_features2d.4.3.0.dylib  /usr/local/lib/libopencv_flann.4.3.0.dylib  /usr/local/lib/libopencv_imgproc.4.3.0.dylib  /usr/local/lib/libopencv_core.4.3.0.dylib
+  OBJECT_DIR = CMakeFiles/GaussBlur.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = GaussBlur
+  TARGET_PDB = GaussBlur.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target calGrayHist
+
+
+#############################################
+# Order-only phony target for calGrayHist
+
+build cmake_object_order_depends_target_calGrayHist: phony || CMakeFiles/calGrayHist.dir
+
+build CMakeFiles/calGrayHist.dir/calGrayHist.cpp.o: CXX_COMPILER__calGrayHist_Debug ../calGrayHist.cpp || cmake_object_order_depends_target_calGrayHist
+  DEP_FILE = CMakeFiles/calGrayHist.dir/calGrayHist.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk   -std=gnu++11
+  INCLUDES = -isystem /usr/local/include/opencv4
+  OBJECT_DIR = CMakeFiles/calGrayHist.dir
+  OBJECT_FILE_DIR = CMakeFiles/calGrayHist.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target calGrayHist
+
+
+#############################################
+# Link the executable calGrayHist
+
+build calGrayHist: CXX_EXECUTABLE_LINKER__calGrayHist_Debug CMakeFiles/calGrayHist.dir/calGrayHist.cpp.o | /usr/local/lib/libopencv_dnn.4.3.0.dylib /usr/local/lib/libopencv_gapi.4.3.0.dylib /usr/local/lib/libopencv_highgui.4.3.0.dylib /usr/local/lib/libopencv_ml.4.3.0.dylib /usr/local/lib/libopencv_objdetect.4.3.0.dylib /usr/local/lib/libopencv_photo.4.3.0.dylib /usr/local/lib/libopencv_stitching.4.3.0.dylib /usr/local/lib/libopencv_video.4.3.0.dylib /usr/local/lib/libopencv_videoio.4.3.0.dylib /usr/local/lib/libopencv_imgcodecs.4.3.0.dylib /usr/local/lib/libopencv_calib3d.4.3.0.dylib /usr/local/lib/libopencv_features2d.4.3.0.dylib /usr/local/lib/libopencv_flann.4.3.0.dylib /usr/local/lib/libopencv_imgproc.4.3.0.dylib /usr/local/lib/libopencv_core.4.3.0.dylib
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libopencv_dnn.4.3.0.dylib  /usr/local/lib/libopencv_gapi.4.3.0.dylib  /usr/local/lib/libopencv_highgui.4.3.0.dylib  /usr/local/lib/libopencv_ml.4.3.0.dylib  /usr/local/lib/libopencv_objdetect.4.3.0.dylib  /usr/local/lib/libopencv_photo.4.3.0.dylib  /usr/local/lib/libopencv_stitching.4.3.0.dylib  /usr/local/lib/libopencv_video.4.3.0.dylib  /usr/local/lib/libopencv_videoio.4.3.0.dylib  /usr/local/lib/libopencv_imgcodecs.4.3.0.dylib  /usr/local/lib/libopencv_calib3d.4.3.0.dylib  /usr/local/lib/libopencv_features2d.4.3.0.dylib  /usr/local/lib/libopencv_flann.4.3.0.dylib  /usr/local/lib/libopencv_imgproc.4.3.0.dylib  /usr/local/lib/libopencv_core.4.3.0.dylib
+  OBJECT_DIR = CMakeFiles/calGrayHist.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = calGrayHist
+  TARGET_PDB = calGrayHist.dbg
+
 # =============================================================================
 # Object build statements for EXECUTABLE target transform
 
@@ -100,29 +189,6 @@ build LoadVideo: CXX_EXECUTABLE_LINKER__LoadVideo_Debug CMakeFiles/LoadVideo.dir
   TARGET_FILE = LoadVideo
   TARGET_PDB = LoadVideo.dbg
 
-
-#############################################
-# Utility command for rebuild_cache
-
-build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/michaelliu/code/opencvdemo/cpp/build && /usr/local/Cellar/cmake/3.17.3/bin/cmake --regenerate-during-build -S/Users/michaelliu/code/opencvdemo/cpp -B/Users/michaelliu/code/opencvdemo/cpp/build
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build rebuild_cache: phony CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/michaelliu/code/opencvdemo/cpp/build && /usr/local/Cellar/cmake/3.17.3/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build edit_cache: phony CMakeFiles/edit_cache.util
-
 # =============================================================================
 # Object build statements for EXECUTABLE target LoadImage
 
@@ -167,7 +233,7 @@ build LoadImage: CXX_EXECUTABLE_LINKER__LoadImage_Debug CMakeFiles/LoadImage.dir
 #############################################
 # Folder: /Users/michaelliu/code/opencvdemo/cpp/build
 
-build all: phony transform LoadVideo LoadImage
+build all: phony GaussBlur calGrayHist transform LoadVideo LoadImage
 
 # =============================================================================
 # Unknown Build Time Dependencies.

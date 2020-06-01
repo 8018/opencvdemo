@@ -30,7 +30,12 @@ int main(int, char**)
     namedWindow("origin Image", WINDOW_AUTOSIZE );
     imshow("origin Image", src);
 
-    Mat dst_warp, dst_warpRotateScale, dst_warpTransformation, dst_warpFlip;
+    Mat dst_warp, 
+    dst_warpRotateScale, 
+    dst_warpTransformation, 
+    dst_warpFlip,
+    dst_mirror_vertical,
+    dst_rotate;
 
 	Point2f srcPoints[3];//原图中的三点 ,一个包含三维点（x，y）的数组，其中x、y是浮点型数
 	Point2f dstPoints[3];//目标图中的三点  
@@ -70,7 +75,6 @@ int main(int, char**)
 
 	warpAffine(src, dst_warpRotateScale, M2, Size(src.cols, src.rows), INTER_LINEAR);//仿射变换
  												
-    print(M2);
 
     // Point2f srcPoints1[3];
 	// Point2f dstPoints1[3];
@@ -89,7 +93,7 @@ int main(int, char**)
 
     Mat M3=Mat::ones(2,3,CV_32FC1);
 
-    float delta = 0.5;
+    float delta = -0.5;
  
 	M3.at<float>(0,0)=cos(delta);
 	M3.at<float>(0,1)=-sin(delta);
@@ -100,7 +104,6 @@ int main(int, char**)
 
 	warpAffine(src, dst_warpTransformation, M3, Size(src.cols, src.rows), INTER_LINEAR);//仿射变换
  												
-    print(M3);
  
 	//仿射变换—翻转、镜像
 	Point2f srcPoints2[3];
@@ -116,21 +119,81 @@ int main(int, char**)
  
 	Mat M4 = getAffineTransform(srcPoints2, dstPoints2);
 	warpAffine(src, dst_warpFlip, M4, Size(src.cols, src.rows));
+
+
+//仿射变换—翻转、镜像
+	Point2f srcPoints3[3];
+	Point2f dstPoints3[3];
+ 
+	srcPoints3[0] = Point2i(0, 0);
+	srcPoints3[1] = Point2i(0, src.rows);
+	srcPoints3[2] = Point2i(src.cols, 0);
+ 
+	dstPoints3[0] = Point2i(0, src.rows);
+	dstPoints3[1] = Point2i(0, 0);
+	dstPoints3[2] = Point2i(src.cols, src.rows);
+ 
+	Mat M5 = getAffineTransform(srcPoints3, dstPoints3);
+	warpAffine(src, dst_mirror_vertical, M5, Size(src.cols, src.rows));
+
+
+     Mat M6 = getRotationMatrix2D(center,45,1);
+
+	warpAffine(src, dst_rotate, M6, Size(src.cols, src.rows), INTER_LINEAR);//仿射变换
+ 	
+
+
+    // 旋转角度
+	// 计算旋转后输出图形的尺寸
+	int rotated_width = ceil(src.rows * fabs(sin(angle * CV_PI / 180)) + src.cols * fabs(cos(angle * CV_PI / 180)));
+	int rotated_height = ceil(src.cols * fabs(sin(angle * CV_PI / 180)) + src.rows * fabs(cos(angle * CV_PI / 180)));
+	
+       cout << "宽度： "<< rotated_width << endl;
+
+
+	// 计算仿射变换矩阵
+	Mat rotate_matrix = getRotationMatrix2D(center, -45, 1.0);
+
+	// 防止切边，对平移矩阵B进行修改
+	rotate_matrix.at<double>(0, 2) += (rotated_width - src.cols) / 2; 
+	rotate_matrix.at<double>(1, 2) += (rotated_height - src.rows) / 2; 
+
+    cout << "宽度： "<< rotate_matrix.at<double>(0, 2) << endl;
+    cout << "宽度： "<< rotate_matrix.at<double>(1, 2) << endl;
+
+
+	// 应用仿射变换
+	warpAffine(src, dst_rotate, rotate_matrix, Size(rotated_width, rotated_height), INTER_LINEAR, 0, Scalar(255, 255, 255));
+
+
+    Mat rotated;
+    rotate(src,rotated,ROTATE_90_COUNTERCLOCKWISE);
+
 	//flip(src, dst_warpFlip, 1);//  flipCode：= 0 图像向下翻转
 	//> 0 图像向右翻转
 	//< 0 图像同时向下向右翻转
  
-    namedWindow("transform_1", WINDOW_AUTOSIZE );
-	imshow("transform_1", dst_warp);
+    // namedWindow("transform_1", WINDOW_AUTOSIZE );
+	// imshow("transform_1", dst_warp);
 
-    namedWindow("transform_2", WINDOW_AUTOSIZE );
-	imshow("transform_2", dst_warpRotateScale);
+    // namedWindow("transform_2", WINDOW_AUTOSIZE );
+	// imshow("transform_2", dst_warpRotateScale);
     
-    namedWindow("transform_3", WINDOW_AUTOSIZE );
-	imshow("transform_3", dst_warpTransformation);
+    // namedWindow("transform_3", WINDOW_AUTOSIZE );
+	// imshow("transform_3", dst_warpTransformation);
     
-    namedWindow("transform_4", WINDOW_AUTOSIZE );
-	imshow("transform_4", dst_warpFlip);
+    // namedWindow("transform_4", WINDOW_AUTOSIZE );
+	// imshow("transform_4", dst_warpFlip);
+    
+    // namedWindow("transform_5", WINDOW_AUTOSIZE );
+	// imshow("transform_5", dst_mirror_vertical);
+ 
+    
+    namedWindow("transform_6", WINDOW_AUTOSIZE );
+	imshow("transform_6", dst_rotate);
+
+    namedWindow("transform_7", WINDOW_AUTOSIZE );
+	imshow("transform_7", rotated);
  
 	waitKey(0);
 
