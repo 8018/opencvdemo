@@ -159,7 +159,6 @@ int main(int argc,char *argv[]){
     Mat thresholdTwoPeak = grayImage;
 
 	PeakSplit(thresholdTwoPeak,150,100);
-	//PeakSplit(grayImage,thresholdTwoPeak);
 
 	imshow("Origin Image", src);
 	imshow("Gray Image", grayImage);
