@@ -186,7 +186,7 @@ int main(int argc,char *argv[]){
 	imshow("normalized RGB hist",normalizedRGBHist);
 	imshow("Gmmaed Image",gmmaedImage);
 	imshow("Gmmaed RGB hist",gmmaedRGBHist);
-	imshow("Equal hist",grayImage);
+	imshow("Equal hist",equalImage);
 	waitKey(0);
 
     return 0;

@@ -11,3 +11,6 @@
 *.cmake
 *.json
 /build
+cpp/build
+build
+/cpp/build
