@@ -7,6 +7,8 @@ using namespace std;
 
 Mat calHistrom(Mat image){
 
+
+
     //步骤一：分通道显示
 	vector<Mat>bgr_planes;
 	split(image, bgr_planes);
@@ -70,25 +72,20 @@ int main(int argc,char *argv[]){
     src.convertTo(fI,CV_64F,1.0/255,0);
     double gmma = 0.5;
 
-    Mat o,oHist;
+    Mat o,odst,oHist;
     pow(fI,gmma,o);
 
-    namedWindow("input", WINDOW_AUTOSIZE);
-	namedWindow("input hist", WINDOW_AUTOSIZE);
+	o.convertTo(odst,CV_8U,1.0/255,0);
+	oHist = calHistrom(odst);
+
 	imshow(input, src);
 	imshow("input hist", srcHist);
 
-    namedWindow("output", WINDOW_AUTOSIZE);
-	namedWindow("ouput hist", WINDOW_AUTOSIZE);
 	imshow("output", dst);
 	imshow("output hist", dstHist);
 
-    oHist = calHistrom(dst);
-
-    namedWindow("gmma output", WINDOW_AUTOSIZE);
 	imshow("gmma output", o);
-    namedWindow("gmma output hist", WINDOW_AUTOSIZE);
-	imshow("gmma output hist", o);
+	imshow("gmma output hist",odst);
 	waitKey(0);
 
 
