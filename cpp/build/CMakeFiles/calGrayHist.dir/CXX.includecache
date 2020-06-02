@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/neo/code/opencvdemo/cpp/calGrayHist.cpp
+/Users/michaelliu/code/opencvdemo/cpp/calGrayHist.cpp
 iostream
 -
 opencv2/imgproc.hpp
-/home/neo/code/opencvdemo/cpp/opencv2/imgproc.hpp
+/Users/michaelliu/code/opencvdemo/cpp/opencv2/imgproc.hpp
 opencv2/highgui.hpp
-/home/neo/code/opencvdemo/cpp/opencv2/highgui.hpp
+/Users/michaelliu/code/opencvdemo/cpp/opencv2/highgui.hpp
 
 /usr/local/include/opencv4/opencv2/core.hpp
 opencv2/core/cvdef.h

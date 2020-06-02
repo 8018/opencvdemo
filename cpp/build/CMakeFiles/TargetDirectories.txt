@@ -1,7 +1,10 @@
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/rebuild_cache.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/LoadImage.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/GaussBlur.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/LoadVideo.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/calGrayHist.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/transform.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/edit_cache.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/rebuild_cache.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/transform.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/calGrayHist.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/LoadImage.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/GaussBlur.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/Histrom.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/Sobel.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/LoadVideo.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/edit_cache.dir
+/Users/michaelliu/code/opencvdemo/cpp/build/CMakeFiles/Blur.dir
