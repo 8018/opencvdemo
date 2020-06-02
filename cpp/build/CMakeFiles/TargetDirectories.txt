@@ -1,7 +1,0 @@
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/rebuild_cache.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/LoadImage.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/GaussBlur.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/LoadVideo.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/calGrayHist.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/transform.dir
-/home/neo/code/opencvdemo/cpp/build/CMakeFiles/edit_cache.dir

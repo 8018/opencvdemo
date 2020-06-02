@@ -10,4 +10,7 @@
 *.make
 *.cmake
 *.json
-/build
+/build/
+cpp/build/
+build/
+/cpp/build/
