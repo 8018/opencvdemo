@@ -137,7 +137,7 @@ Mat getRGBHistograph(const Mat image){
 int main(int argc,char *argv[]){
 
     Mat image;
-    image = imread( "../../Resources/cathy.png", 1 );
+    image = imread( "../../Resources/hand.png", 1 );
 	if (!image.data)
 	{
 		printf("could not load image...\n");

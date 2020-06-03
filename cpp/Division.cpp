@@ -133,7 +133,7 @@ int thresholdTwoPeaks(const Mat src,const Mat out){
 int main(int argc,char *argv[]){
 
     Mat src;
-    src = imread( "../../Resources/anita.png", 1 );
+    src = imread( "../../Resources/hand.png", 1 );
 	if (!src.data)
 	{
 		printf("could not load image...\n");
